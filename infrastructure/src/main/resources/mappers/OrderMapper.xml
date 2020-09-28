@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.dao.OrderMapper">
+
+
+    <insert id="add" parameterType="com.example.po.OrderPo">
+        insert into t_order(order_id,purchaser,consignee_name,consignee_phone,consignee_addr)
+        values (#{orderPo.orderId},#{orderPo.purchaser},#{orderPo.consigneeName},#{orderPo.consigneePhone},#{orderPo.consigneeAddr})
+    </insert>
+</mapper>
