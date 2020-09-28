@@ -1,0 +1,6 @@
+api/target
+application-service/target
+dependency/target
+domain-service/target
+infrastructure/target
+.idea/

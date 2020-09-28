@@ -1,5 +1,0 @@
-server:
-  port: 8081
-logging:
-  level:
-    com.example.dao: DEBUG
