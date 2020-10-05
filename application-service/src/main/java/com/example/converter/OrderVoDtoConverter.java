@@ -16,6 +16,7 @@ import java.util.List;
  * @Author: admin
  * @Date: 2020/9/27 16:25
  */
+@Deprecated
 public class OrderVoDtoConverter {
 
     public static OrderDto voToDto(OrderRequestVo orderRequestVo){

@@ -3,6 +3,7 @@ package com.example.dto;
 import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
+import lombok.ToString;
 
 /**
  * @Description: orderDetail
@@ -11,6 +12,7 @@ import lombok.Setter;
  */
 @Setter
 @Getter
+@ToString
 public class OrderDetailDto {
 
     private String goodsId;

@@ -1,6 +1,7 @@
 package com.example.applicationService;
 
 import com.example.check.OrderValidUtil;
+import com.example.converter.OrderConverter;
 import com.example.converter.OrderVoDtoConverter;
 import com.example.dto.OrderDto;
 import com.example.entity.OrderEntity;
@@ -21,9 +22,8 @@ public class OrderApplicationService implements OrderIface {
 
     @Override
     public void createOrder(OrderRequestVo orderRequestVo) {
-        log.info("进入service -------------------------------");
         OrderValidUtil.checkCreateOrder(orderRequestVo);
-        OrderDto orderDto = OrderVoDtoConverter.voToDto(orderRequestVo);
+        OrderDto orderDto = OrderConverter.INSTANCE.VoToDto(orderRequestVo);
         OrderEntity orderEntity = OrderEntityFactory.createOrderEntity();
         orderEntity.create(orderDto);
     }
